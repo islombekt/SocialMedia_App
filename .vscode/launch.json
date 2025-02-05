@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+      {
+        "name": "Post.Cmd.API launch",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "program": "${workspaceFolder}/SM-Post/Post.Cmd.Api/bin/Debug/net8.0/Post.Cmd.Api.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}/SM-Post/Post.Cmd/Post.Cmd.Api",
+        "stopAtEntry": false,
+        "serverReadyAction": {
+          "action": "openExternally",
+          "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+        },
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development",
+          "ASPNETCORE_URLS":"http://localhost:5010"
+        },
+        "sourceFileMap": {
+          "/Users": "${workspaceFolder}/Views"
+        }
+      },
+      {
+        "name": "Post.Query.API launch",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "program": "${workspaceFolder}/SM-Post/Post.Query.Api/bin/Debug/net8.0/Post.Query.Api.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}/SM-Post/Post.Query/Post.Query.Api",
+        "stopAtEntry": false,
+        "serverReadyAction": {
+          "action": "openExternally",
+          "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+        },
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development",
+          "ASPNETCORE_URLS":"http://localhost:5011"
+        },
+        "sourceFileMap": {
+          "/Users": "${workspaceFolder}/Views"
+        }
+      }
+    ]
+  }
+  
