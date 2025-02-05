@@ -1,0 +1,90 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Rider / JetBrains
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.cache
+*.user
+*.vs/
+
+# ASP.NET Core environment files
+.env
+secrets.json
+
+# Ignore VS Code specific files
+.vscode/
+.vscode/launch.json
+
+# Ignore log files
+*.log
+logs/
+
+# Ignore dependencies
+*.dll
+*.pdb
+*.exe
+*.app
+*.ipa
+*.so
+*.dylib
+*.a
+*.lib
+
+# Ignore coverage reports
+coverage/
+*.cov
+*.coverage
+*.coveragexml
+
+# Ignore .NET Core dependencies
+project.lock.json
+project.assets.json
+global.json
+packages/
+.nuget/
+.nuget/packages/
+
+# Ignore Publish directory
+publish/
+wwwroot/
+
+# Ignore migrations if needed
+Migrations/
+
+# Ignore Node.js dependencies (if using frontend assets)
+node_modules/
+
+# Ignore compiled files and cache
+*.db
+*.sqlite
+*.bak
+*.mdf
+*.ldf
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+
+# Ignore app settings and secrets
+appsettings.json
+appsettings.*.json
+secrets.json
+
+# Ignore NPM/Yarn logs (if any frontend is present)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ignore ReSharper settings
+_ReSharper*/
+
+# Ignore other IDE-specific settings
+*.iml
+*.ipr
+*.iws
+.idea/
