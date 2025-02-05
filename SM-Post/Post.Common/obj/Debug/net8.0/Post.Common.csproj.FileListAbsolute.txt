@@ -1,0 +1,16 @@
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\bin\Debug\net8.0\Post.Common.deps.json
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\bin\Debug\net8.0\Post.Common.dll
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\bin\Debug\net8.0\Post.Common.pdb
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\bin\Debug\net8.0\CQRS.Core.dll
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\bin\Debug\net8.0\CQRS.Core.pdb
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\Post.Common.csproj.AssemblyReference.cache
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\Post.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\Post.Common.AssemblyInfoInputs.cache
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\Post.Common.AssemblyInfo.cs
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\Post.Common.csproj.CoreCompileInputs.cache
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\Post.Common.sourcelink.json
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\Post.Com.894DB8FF.Up2Date
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\Post.Common.dll
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\refint\Post.Common.dll
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\Post.Common.pdb
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\SM-Post\Post.Common\obj\Debug\net8.0\ref\Post.Common.dll

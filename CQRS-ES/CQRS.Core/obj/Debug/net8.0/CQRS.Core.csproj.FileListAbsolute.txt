@@ -1,0 +1,13 @@
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\bin\Debug\net8.0\CQRS.Core.deps.json
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\bin\Debug\net8.0\CQRS.Core.dll
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\bin\Debug\net8.0\CQRS.Core.pdb
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\CQRS.Core.csproj.AssemblyReference.cache
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\CQRS.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\CQRS.Core.AssemblyInfoInputs.cache
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\CQRS.Core.AssemblyInfo.cs
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\CQRS.Core.csproj.CoreCompileInputs.cache
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\CQRS.Core.sourcelink.json
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\CQRS.Core.dll
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\refint\CQRS.Core.dll
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\CQRS.Core.pdb
+D:\udemyLearning\Microservice_CQRS_EventSourcing_with_kafka\lecture_resources\SocialMedia_App\CQRS-ES\CQRS.Core\obj\Debug\net8.0\ref\CQRS.Core.dll

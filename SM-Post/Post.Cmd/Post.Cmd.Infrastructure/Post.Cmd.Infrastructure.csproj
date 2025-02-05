@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\CQRS-ES\CQRS.Core\CQRS.Core.csproj" />
-    <ProjectReference Include="..\Post.Cmd.Domain\Post.Cmd.Domain.csproj" />
+    <ProjectReference Include="..\..\..\CQRS-ES\CQRS.Core\CQRS.Core.csproj"/>
+    <ProjectReference Include="..\Post.Cmd.Domain\Post.Cmd.Domain.csproj"/>
   </ItemGroup>
 
   <PropertyGroup>
