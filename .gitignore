@@ -1,7 +1,14 @@
-# Ignore build outputs
+# Ignore all bin and obj folders in all projects
 bin/
 obj/
+**/bin/
+**/obj/
 
+# Ignore compiled files
+*.dll
+*.pdb
+*.exe
+*.AssemblyInfo.cs
 # Rider / JetBrains
 .idea/
 *.suo
