@@ -142,7 +142,7 @@ namespace Post.Cmd.Domain.Aggregates
             _id=@event.Id;
             _comments.Remove(@event.CommentId);
         }
-        public void DatePosted(string username)
+        public void DatePost(string username)
         {
             if(!_active)
             {

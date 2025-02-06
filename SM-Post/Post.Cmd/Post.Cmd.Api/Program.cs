@@ -1,6 +1,11 @@
 using CQRS.Core.Domain;
+using CQRS.Core.Handlers;
 using CQRS.Core.Infrastructure;
+using Post.Cmd.Api.Commands;
+using Post.Cmd.Domain.Aggregates;
 using Post.Cmd.Infrastructure.Config;
+using Post.Cmd.Infrastructure.Dispetchers;
+using Post.Cmd.Infrastructure.Handlers;
 using Post.Cmd.Infrastructure.Repositories;
 using Post.Cmd.Infrastructure.Stores;
 
@@ -13,6 +18,22 @@ builder.Services.AddSwaggerGen();
 builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection(nameof(MongoDbConfig)));
 builder.Services.AddScoped<IEventStoreRepository, EventStoreRepository>();
 builder.Services.AddScoped<IEventStore, EventStore>();
+builder.Services.AddScoped<IEventSourcingHandler<PostAggregate>, EventSourcingHandler>();
+builder.Services.AddScoped<ICommandHandler, CommandHandler>();
+
+// register command handler methods
+var CommandHandler = builder.Services.BuildServiceProvider().GetRequiredService<ICommandHandler>();
+var dispetcher = new CommandDispetcher();
+dispetcher.RegisterHandler<NewPostCommand>(CommandHandler.HandleAsync);
+dispetcher.RegisterHandler<EditMessageCommand>(CommandHandler.HandleAsync);
+dispetcher.RegisterHandler<LikePostCommand>(CommandHandler.HandleAsync);
+dispetcher.RegisterHandler<DeletePostCommand>(CommandHandler.HandleAsync);
+dispetcher.RegisterHandler<EditCommentCommand>(CommandHandler.HandleAsync);
+dispetcher.RegisterHandler<AddCommentCommand>(CommandHandler.HandleAsync);
+dispetcher.RegisterHandler<RemoveCommentCommand>(CommandHandler.HandleAsync);
+
+builder.Services.AddSingleton<ICommandDispetcher>(_ => dispetcher);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
