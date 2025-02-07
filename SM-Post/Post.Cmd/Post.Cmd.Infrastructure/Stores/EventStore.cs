@@ -6,6 +6,7 @@ using CQRS.Core.Domain;
 using CQRS.Core.Events;
 using CQRS.Core.Exception;
 using CQRS.Core.Infrastructure;
+using CQRS.Core.Producers;
 using Post.Cmd.Domain.Aggregates;
 
 namespace Post.Cmd.Infrastructure.Stores
@@ -13,9 +14,11 @@ namespace Post.Cmd.Infrastructure.Stores
     public class EventStore : IEventStore
     {
         private readonly IEventStoreRepository _eventStoreRepository;
-        public EventStore(IEventStoreRepository eventStoreRepository)
+        private readonly IEventProducer _eventProducer;
+        public EventStore(IEventStoreRepository eventStoreRepository, IEventProducer eventProducer)
         {
             _eventStoreRepository = eventStoreRepository;
+            _eventProducer = eventProducer;
         }
         public async Task<List<BaseEvent>> GetEventsAsync(Guid aggregateId)
         {
@@ -50,6 +53,13 @@ namespace Post.Cmd.Infrastructure.Stores
                     EventData = @event
                 };
                 await _eventStoreRepository.SaveAsync(eventModle);
+
+                // send event to Kafka topic
+                var topic = Environment.GetEnvironmentVariable("KAFKA_TOPIC"); // this topic name is on launch.json file in .vscode, 
+                    //on production we can save those data not in launch set. but on k8s or docker deployment files
+                // if mongo db has set with replicas, then save those event on mongo db with transaction, like if mongo or kafka fails to save or send that event, 
+                // then transaction will be reversed and makes it like no actions or events were performed 
+                await _eventProducer.ProduceAsync(topic, @event);
             }
         }
     }
