@@ -7,9 +7,9 @@
         "type": "coreclr",
         "request": "launch",
         "preLaunchTask": "build",
-        "program": "${workspaceFolder}/SM-Post/Post.Cmd.Api/bin/Debug/net8.0/Post.Cmd.Api.dll",
+        "program": "D:/udemyLearning/Microservice_CQRS_EventSourcing_with_kafka/lecture_resources/SocialMedia_App/SM-Post/Post.Cmd.Api/bin/Debug/net8.0/Post.Cmd.Api.dll",
         "args": [],
-        "cwd": "${workspaceFolder}/SM-Post/Post.Cmd/Post.Cmd.Api",
+        "cwd": "D:/udemyLearning/Microservice_CQRS_EventSourcing_with_kafka/lecture_resources/SocialMedia_App/SM-Post/Post.Cmd/Post.Cmd.Api",
         "stopAtEntry": false,
         "serverReadyAction": {
           "action": "openExternally",
@@ -29,9 +29,9 @@
         "type": "coreclr",
         "request": "launch",
         "preLaunchTask": "build",
-        "program": "${workspaceFolder}/SM-Post/Post.Query.Api/bin/Debug/net8.0/Post.Query.Api.dll",
+       "program": "D:/udemyLearning/Microservice_CQRS_EventSourcing_with_kafka/lecture_resources/SocialMedia_App/SM-Post/Post.Query/Post.Query.Api/bin/Debug/net8.0/Post.Query.Api.dll",
         "args": [],
-        "cwd": "${workspaceFolder}/SM-Post/Post.Query/Post.Query.Api",
+        "cwd": "D:/udemyLearning/Microservice_CQRS_EventSourcing_with_kafka/lecture_resources/SocialMedia_App/SM-Post/Post.Query/Post.Query.Api",
         "stopAtEntry": false,
         "serverReadyAction": {
           "action": "openExternally",
