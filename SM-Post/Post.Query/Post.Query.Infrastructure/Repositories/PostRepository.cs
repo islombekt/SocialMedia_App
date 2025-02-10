@@ -37,13 +37,12 @@ namespace Post.Query.Infrastructure.Repositories
            _ = await context.SaveChangesAsync();
         }
 
-        public async Task<PostEntity> GetByIdAsync(Guid PostId)
+        public async Task<PostEntity?> GetByIdAsync(Guid PostId)
         {
            using DatabaseContext context = _contextFactory.CreateDbContext();
            return await context.Posts
                                .Include(c=>c.Comments)
-                               .FirstOrDefaultAsync(c => c.PostId == PostId) 
-                               ?? new PostEntity();
+                               .FirstOrDefaultAsync(c => c.PostId == PostId);
 
         }
 

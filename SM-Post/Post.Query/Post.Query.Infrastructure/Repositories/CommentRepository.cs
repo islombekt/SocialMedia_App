@@ -32,10 +32,10 @@ namespace Post.Query.Infrastructure.Repositories
             _ = await context.SaveChangesAsync();
         }
 
-        public async Task<CommentEntity> GetByIdAsync(Guid commentId)
+        public async Task<CommentEntity?> GetByIdAsync(Guid commentId)
         {
              using DatabaseContext context = _contextFactory.CreateDbContext();
-             return await context.Comments.FirstOrDefaultAsync(c=>c.CommentId == commentId) ?? new CommentEntity();
+             return await context.Comments.FirstOrDefaultAsync(c=>c.CommentId == commentId);
         }
 
         public async Task UpdateAsync(CommentEntity comment)
