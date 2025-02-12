@@ -14,12 +14,17 @@ namespace Post.Query.Infrastructure.Repositories
         }
         public async Task CreateAsync(PostEntity post)
         {
-            using (DatabaseContext context = _contextFactory.CreateDbContext())
+            try
             {
-                context.Posts.Add(post);
-                _ = await context.SaveChangesAsync();
-            }
-            throw new NotImplementedException();
+             using DatabaseContext context = _contextFactory.CreateDbContext();
+             context.Posts.Add(post);
+            _ = await context.SaveChangesAsync();
+           }
+           catch(Exception ex)
+           {
+            Console.WriteLine($"ERRROR on SAVE TO MSSQL {ex.Message}");
+           }
+            
         }
 
         public async Task DeleteAsync(Guid PostId)

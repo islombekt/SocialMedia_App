@@ -11,6 +11,7 @@ namespace Post.Query.Infrastructure.DataAccess
         private readonly Action<DbContextOptionsBuilder> _configureDbContext;
         public DatabaseContextFactory(Action<DbContextOptionsBuilder> configureDbContext)
         {
+            _configureDbContext=configureDbContext;
         }
         public DatabaseContext CreateDbContext()
         {

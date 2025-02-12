@@ -16,8 +16,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection(nameof(MongoDbConfig)));
 builder.Services.Configure<ProducerConfig>(builder.Configuration.GetSection(nameof(ProducerConfig)));
 builder.Services.AddScoped<IEventStoreRepository, EventStoreRepository>();
@@ -38,7 +40,6 @@ dispetcher.RegisterHandler<AddCommentCommand>(CommandHandler.HandleAsync);
 dispetcher.RegisterHandler<RemoveCommentCommand>(CommandHandler.HandleAsync);
 
 builder.Services.AddSingleton<ICommandDispetcher>(_ => dispetcher);
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -69,7 +70,9 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
+app.UseAuthorization();
 
+app.MapControllers();
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)

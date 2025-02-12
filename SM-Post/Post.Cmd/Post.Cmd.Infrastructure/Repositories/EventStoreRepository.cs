@@ -22,11 +22,12 @@ namespace Post.Cmd.Infrastructure.Repositories
         }
         public async Task<List<EventModel>> FindByAggregateId(Guid aggregateId)
         {
-            return await _eventStoreCollection.Find(x => x.AggregateIdentifier == aggregateId).ToListAsync().ConfigureAwait(false); // forcing to avoid deadlocks configure false
+            return await _eventStoreCollection.Find(x => x.AggregateIdentifier == aggregateId.ToString()).ToListAsync().ConfigureAwait(false); // forcing to avoid deadlocks configure false
         }
 
         public async Task SaveAsync(EventModel @event)
         {
+            @event.AggregateIdentifier = @event.AggregateIdentifier.ToString(); 
             await _eventStoreCollection.InsertOneAsync(@event).ConfigureAwait(false);
         }
     }

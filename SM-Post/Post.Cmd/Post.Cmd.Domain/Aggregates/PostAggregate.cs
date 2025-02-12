@@ -29,7 +29,7 @@ namespace Post.Cmd.Domain.Aggregates
         }
         public void Apply(PostCreatedEvent @event)
         {
-            _id=Id;
+            _id=@event.Id;
             _active=true;
             _author=@event.Author;
         }

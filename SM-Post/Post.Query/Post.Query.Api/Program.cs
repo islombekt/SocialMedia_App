@@ -13,6 +13,7 @@ Action<DbContextOptionsBuilder> configureDbContext = (o => o.UseLazyLoadingProxi
 .UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 builder.Services.AddDbContext<DatabaseContext>(configureDbContext);
 builder.Services.AddSingleton<DatabaseContextFactory>(new DatabaseContextFactory(configureDbContext));
+Console.WriteLine($"SQL:::::::: {builder.Configuration.GetConnectionString("SqlServer")}");
 
 // create database dn table from code
 var dataContext = builder.Services.BuildServiceProvider().GetRequiredService<DatabaseContext>();
