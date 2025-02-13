@@ -26,14 +26,14 @@ namespace Post.Query.Infrastructure.Repositories
            }
             
         }
-
+        
         public async Task DeleteAsync(Guid PostId)
         {
             using DatabaseContext context = _contextFactory.CreateDbContext();
            var post = await GetByIdAsync(PostId);
 
            if(post == null) return;
-           
+           //comments automatically deletes as we create entity with foreign key constraint for cascade(referencing child table records will alse be deleted) on delete
            context.Posts.Remove(post);
            _ = await context.SaveChangesAsync();
         }
