@@ -27,10 +27,17 @@ namespace Post.Query.Infrastructure.Handlers
 
         public async Task On(MessageUpdatedEvent @event)
         {
+            try
+            {
             var post = await _postRepo.GetByIdAsync(@event.Id);
             if(post == null) return;
             post.Message = @event.Message;
             await _postRepo.UpdateAsync(post);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+            }
         }
 
         public async Task On(PostLikedEvent @event)

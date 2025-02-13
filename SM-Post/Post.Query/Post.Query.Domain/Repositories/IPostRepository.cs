@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Post.Query.Domain.Enities;
 
 namespace Post.Query.Domain.Repositories
