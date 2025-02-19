@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CQRS.Core.Queries
 {
-    public class BaseQuery
+    public abstract class BaseQuery
     {
         
     }
