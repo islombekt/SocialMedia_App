@@ -50,6 +50,8 @@ dispetcher.RegisterHandler<DeletePostCommand>(CommandHandler.HandleAsync);
 dispetcher.RegisterHandler<EditCommentCommand>(CommandHandler.HandleAsync);
 dispetcher.RegisterHandler<AddCommentCommand>(CommandHandler.HandleAsync);
 dispetcher.RegisterHandler<RemoveCommentCommand>(CommandHandler.HandleAsync);
+dispetcher.RegisterHandler<RestoreReadDbCommand>(CommandHandler.HandleAsync);
+
 
 builder.Services.AddSingleton<ICommandDispetcher>(_ => dispetcher);
 var app = builder.Build();

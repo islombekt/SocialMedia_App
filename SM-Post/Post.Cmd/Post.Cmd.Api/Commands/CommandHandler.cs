@@ -58,5 +58,9 @@ namespace Post.Cmd.Api.Commands
              aggregate.DatePost(command.UserName);
              await _eventSourcingHandler.SaveAsync(aggregate); 
         }
+        public async Task HandleAsync(RestoreReadDbCommand command)
+        {
+            await _eventSourcingHandler.RepublishEventsAsync();
+        }
     }
 }
